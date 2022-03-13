@@ -8,6 +8,7 @@
   --main-color: #7D7D7D;
   --title-color: #121212;
   --acent-color: #514A7E;
+  --bgd-color: #FFFDF5;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   line-height: 1.5;
   font-weight: 300;
   color: var(--main-color);
+  background-color: var(--bgd-color);
 }
 
 .container {
@@ -152,6 +154,10 @@ body {
 
 /* benefits */
 
+.benefits {
+  margin-bottom: 130px;
+}
+
 .title {
   font-size: 40px;
   color: var(--title-color);
@@ -205,7 +211,7 @@ body {
 .benefits__item--five::after {
   width: 47px;
   height: 47px;
-  
+
 }
 
 .benefits__item--three::after {
@@ -226,6 +232,7 @@ body {
 .benefits__links {
   display: flex;
 }
+
 .benefits__up,
 .benefits__chat {
   display: block;
@@ -242,7 +249,7 @@ body {
 }
 
 .benefits__up {
-   margin-right: auto;
+  margin-right: auto;
 }
 
 .benefits__chat {
@@ -262,3 +269,90 @@ body {
   left: 18px;
   top: 18px;
 }
+
+/* sale */
+
+.sale__title {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.sale__title::after {
+  content: 'Акции';
+  position: absolute;
+  font-family: 'Bad Script', cursive;
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--acent-color);
+  top: 30px;
+  left: 265px;
+}
+
+.sale__articles {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 135px;
+}
+
+.card {
+  max-width: 280px;
+}
+
+.card:not(:last-child) {
+  margin-right: 80px;
+}
+
+.card__img {
+  width: 280px;
+  height: 320px;
+}
+
+.card__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__curent {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--title-color);
+}
+
+.card__old {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--main-color);
+  text-decoration: line-through;
+}
+
+.card__title {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 13px;
+}
+
+.card__more {
+  display: block;
+  font-size: 14px;
+  color: var(--title-color);
+  font-weight: 400;
+  text-decoration: none;
+  padding: 14px 25px;
+  border: .5px solid var(--title-color);
+  position: relative;
+}
+
+.card__more::after {
+  content: url(../img/icons/card-arrow.svg);
+  position: absolute;
+  right: 25px;
+  top: 13px;
+}
+
+.card__options {}
+
+.card__favorite {}
+
+.card__bag {}
+
+.card__ratio {}
