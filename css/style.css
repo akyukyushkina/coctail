@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -11,6 +13,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
+  font-weight: 300;
   color: var(--main-color);
 }
 
@@ -116,7 +119,6 @@ body {
 }
 
 .header__text {
-  font-weight: 300;
   font-size: 16px;
   max-width: 255px;
 }
@@ -124,6 +126,7 @@ body {
 .header__link {
   display: block;
   padding: 70px 40px;
+  color: var(--acent-color);
   font-size: 20px;
   font-weight: 400;
   text-decoration: none;
@@ -147,3 +150,115 @@ body {
   right: 30px;
 }
 
+/* benefits */
+
+.title {
+  font-size: 40px;
+  color: var(--title-color);
+}
+
+.benefits__title {
+  margin-bottom: 95px;
+}
+
+.benefits__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: -100px;
+}
+
+.benefits__item {
+  list-style: none;
+  max-width: 185px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.benefits__item:not(:last-child) {
+  margin-right: 100px;
+}
+
+.benefits__item--one::after,
+.benefits__item--three::after,
+.benefits__item--five::after,
+.benefits__item--six::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: var(--acent-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(81, 74, 126, 0.4);
+}
+
+.benefits__item--one::after {
+  bottom: -5px;
+  right: 30px;
+}
+
+.benefits__item--three::after,
+.benefits__item--five::after {
+  width: 47px;
+  height: 47px;
+  
+}
+
+.benefits__item--three::after {
+  bottom: 30px;
+  right: -50px;
+}
+
+.benefits__item--five::after {
+  top: 10px;
+  right: -50px;
+}
+
+.benefits__item--six::after {
+  bottom: 25px;
+  right: -25px;
+}
+
+.benefits__links {
+  display: flex;
+}
+.benefits__up,
+.benefits__chat {
+  display: block;
+  width: 72px;
+  height: 72px;
+  background-color: var(--acent-color);
+  border-radius: 50%;
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(81, 74, 126, 0.4);
+}
+
+.benefits__up {
+   margin-right: auto;
+}
+
+.benefits__chat {
+  margin-left: auto;
+}
+
+.benefits__up::after {
+  content: url(../img/icons/up-arrow.svg);
+  position: absolute;
+  left: 32px;
+  top: 20px;
+}
+
+.benefits__chat::after {
+  content: url(../img/icons/chat.svg);
+  position: absolute;
+  left: 18px;
+  top: 18px;
+}
